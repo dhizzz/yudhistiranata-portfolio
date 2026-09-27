@@ -114,7 +114,7 @@ export function WorkArchiveView({
         // A uniform grid on purpose: in the full archive every project carries equal weight.
         <motion.ul layout className="mt-8 grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout" initial={false}>
-            {filtered.map((project) => (
+            {filtered.map((project, index) => (
               <motion.li
                 key={project.slug}
                 layout
@@ -124,7 +124,12 @@ export function WorkArchiveView({
                 transition={{ duration: 0.25 }}
               >
                 <Link href={`/work/${project.slug}`} className="group block">
-                  <ProjectShot project={project} sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw" />
+                  <ProjectShot
+                    project={project}
+                    // The first row sits above the fold, so it loads eagerly for a faster first paint.
+                    preload={index < 3}
+                    sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+                  />
                   <div className="mt-4 flex items-baseline gap-3 border-b border-rule pb-4">
                     <span className="font-mono text-xs text-ink-muted">
                       {padNumber(getProjectNumber(project.slug))}
