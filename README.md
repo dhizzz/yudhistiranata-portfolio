@@ -32,6 +32,7 @@ npm run lint    # ESLint
 | `src/data/projects.ts` | Project list: name, category, live domain, featured flag, short summary |
 | `src/data/case-studies.ts` | Case study per project: context, approach, what was built, outcome, stack |
 | `src/data/site.ts` | Contact channels and the stack shown on the About page |
+| `src/data/certifications.ts` | Certifications on the About page: issuer, dates, credential ID and link |
 | `src/lib/i18n/dictionary.ts` | Every interface string in English and Indonesian |
 | `public/work/` | Homepage screenshots, one per project, named after the project slug |
 

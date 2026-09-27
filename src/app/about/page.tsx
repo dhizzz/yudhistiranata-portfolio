@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/context";
 import { FadeIn } from "@/components/FadeIn";
 import { Portrait } from "@/components/Portrait";
+import { Certifications } from "@/components/Certifications";
 import {
   categories,
   categoryOrder,
@@ -94,6 +95,8 @@ export default function AboutPage() {
           ))}
         </ol>
       </section>
+
+      <Certifications />
 
       <div className="grid gap-12 border-t border-rule pt-10 lg:grid-cols-12 lg:gap-8">
         <FadeIn className="lg:col-span-6">
