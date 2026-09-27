@@ -7,12 +7,14 @@ export interface Certification {
   issued: string;
   expires?: string;
   credentialId?: string;
+  registrationId?: string;
   summary: Localized;
   /**
    * "verify" only when the page confirms this credential for this person.
    * "course" when the link is the course or exam page and does not show the holder.
+   * Omitted entirely when there is no public page to link to; the scanned certificate still speaks for itself.
    */
-  link: { href: string; kind: "verify" | "course" };
+  link?: { href: string; kind: "verify" | "course" };
   image?: { src: string; width: number; height: number };
 }
 
@@ -49,6 +51,23 @@ export const certifications: Certification[] = [
     link: {
       href: "https://updraft.cyfrin.io/courses/blockchain-basics/final/proficiency-exam",
       kind: "course",
+    },
+  },
+  {
+    title: "Sertifikat Kompetensi: Pemrogram (Programmer)",
+    issuer: "BNSP, LSP Universitas Pamulang",
+    issued: "2025-04",
+    expires: "2028-04",
+    credentialId: "62000 2519 0 0017161 2025",
+    registrationId: "J.1426.01734 2025",
+    summary: {
+      en: "National competency certification (BNSP) in programming, issued by the professional certification body of Universitas Pamulang.",
+      id: "Sertifikasi kompetensi nasional (BNSP) di bidang pemrograman, diterbitkan oleh Lembaga Sertifikasi Profesi Universitas Pamulang.",
+    },
+    image: {
+      src: "/certificates/bnsp-programmer.jpg",
+      width: 719,
+      height: 1000,
     },
   },
 ];

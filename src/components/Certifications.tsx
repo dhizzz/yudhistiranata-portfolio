@@ -43,6 +43,9 @@ export function Certifications() {
             ...(cert.credentialId
               ? [{ term: t.about.certCredentialId, value: cert.credentialId, mono: true }]
               : []),
+            ...(cert.registrationId
+              ? [{ term: t.about.certRegistrationId, value: cert.registrationId, mono: true }]
+              : []),
           ];
           return (
             <li key={cert.title} className="border-b border-rule">
@@ -61,16 +64,18 @@ export function Certifications() {
                         {t.about.certView}
                       </button>
                     )}
-                    <a
-                      href={cert.link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex h-11 items-center gap-1.5 text-sm font-medium text-ink-muted transition-colors hover:text-ink"
-                    >
-                      {cert.link.kind === "verify" ? t.about.certVerify : t.about.certCourse}
-                      <span aria-hidden>↗</span>
-                      <span className="sr-only">{t.home.newTab}</span>
-                    </a>
+                    {cert.link && (
+                      <a
+                        href={cert.link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex h-11 items-center gap-1.5 text-sm font-medium text-ink-muted transition-colors hover:text-ink"
+                      >
+                        {cert.link.kind === "verify" ? t.about.certVerify : t.about.certCourse}
+                        <span aria-hidden>↗</span>
+                        <span className="sr-only">{t.home.newTab}</span>
+                      </a>
+                    )}
                   </div>
                 </div>
                 <dl className="self-start border-t border-ink text-sm lg:col-span-4 lg:col-start-9">
@@ -87,7 +92,9 @@ export function Certifications() {
         })}
       </ul>
 
-      {/* Native <dialog>: Escape closes it and focus returns to the button that opened it. */}
+      {/* Native <dialog>: Escape closes it and focus returns to the button that opened it.
+          Flex column with an internal scroll area, so a tall portrait certificate never
+          pushes the Close button off a short phone screen. */}
       <dialog
         ref={dialogRef}
         onClick={(e) => {
@@ -95,11 +102,11 @@ export function Certifications() {
         }}
         onClose={() => setViewing(null)}
         aria-label={viewing ? `${t.about.certImageAlt} ${viewing.title}` : undefined}
-        className="m-auto w-[calc(100%-2rem)] max-w-[34rem] bg-paper p-0 text-ink backdrop:bg-black/70"
+        className="m-auto flex max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-136 flex-col bg-paper p-0 text-ink backdrop:bg-black/70"
       >
         {viewing?.image && (
-          <figure>
-            <div className="flex items-center justify-between gap-4 border-b border-rule px-4 py-2">
+          <figure className="flex min-h-0 flex-col">
+            <div className="flex shrink-0 items-center justify-between gap-4 border-b border-rule px-4 py-2">
               <figcaption className="min-w-0 truncate font-mono text-xs text-ink-muted">
                 {viewing.issuer} · {viewing.title}
               </figcaption>
@@ -111,13 +118,14 @@ export function Certifications() {
                 {t.about.certClose}
               </button>
             </div>
-            <div className="bg-white p-3">
+            <div className="overflow-y-auto bg-white p-3">
               <Image
                 src={viewing.image.src}
                 alt={`${t.about.certImageAlt} ${viewing.title}, ${viewing.issuer}`}
                 width={viewing.image.width}
                 height={viewing.image.height}
-                className="mx-auto h-auto w-full max-w-[484px]"
+                className="mx-auto h-auto w-full"
+                style={{ maxWidth: viewing.image.width }}
               />
             </div>
           </figure>
