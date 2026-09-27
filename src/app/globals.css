@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Theme is driven by a `.dark` class on <html> so the toggle can override the OS setting. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Editorial palette, chosen to read like a printed annual report:
+ * paper    warm off-white so real screenshots (mostly white sites) sit on a distinct ground
+ * ink      deep navy instead of black for a formal, printed feel
+ * accent   brick red, reserved for the one emphasised phrase, active states and focus
+ * All text pairs measured at 5.7:1 or higher in both themes.
+ */
+:root {
+  --paper: #f4f1ea;
+  --paper-raised: #fbfaf6;
+  --ink: #15213b;
+  --ink-muted: #4b5467;
+  --rule: #d6cfc1;
+  --accent: #a8391c;
+  --shot: #e8e3d8;
+  /* Portrait ground: equals the paper in light mode so the white studio backdrop melts into the page. */
+  --portrait: #f4f1ea;
+  color-scheme: light;
+}
+
+.dark {
+  --paper: #0e131c;
+  --paper-raised: #151b26;
+  --ink: #ece6da;
+  --ink-muted: #a7afbd;
+  --rule: #2a3241;
+  --accent: #e58565;
+  --shot: #1b2230;
+  /* In dark mode the portrait sits on a cream card, like a print on a dark desk. */
+  --portrait: #ece6da;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-shot: var(--shot);
+  --color-portrait: var(--portrait);
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --ease-editorial: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Keeps anchors and keyboard focus clear of the sticky header (two rows on mobile, one from sm up). */
+  scroll-padding-top: 7.5rem;
+}
+
+@media (min-width: 640px) {
+  html {
+    scroll-padding-top: 5rem;
+  }
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+/* One focus style for every control: a 2px accent ring offset from the element. */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* On the inverted ink block the accent drops below 3:1, so focus switches to the paper colour. */
+.on-ink :focus-visible {
+  outline-color: var(--paper);
+}
+
+.font-display {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
