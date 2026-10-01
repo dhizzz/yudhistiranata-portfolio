@@ -18,7 +18,6 @@ export default function AboutPage() {
   const facts = [
     { term: t.about.factFocus, value: t.about.factFocusValue },
     { term: t.about.factStack, value: "Next.js, React, TypeScript" },
-    { term: t.about.factEducation, value: t.about.factEducationValue },
   ];
 
   return (

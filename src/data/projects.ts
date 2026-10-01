@@ -255,6 +255,42 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "solvara-chemicals",
+    name: "Solvara Chemicals",
+    category: "company-profile",
+    domain: "solvara-chemicals.vercel.app",
+    status: "live",
+    featured: false,
+    highlight: {
+      en: "A fictional B2B chemicals manufacturer with 16 product pages, a quote-led flow and no cart or prices.",
+      id: "Produsen bahan kimia B2B fiktif dengan 16 halaman produk dan alur permintaan penawaran tanpa keranjang atau harga.",
+    },
+  },
+  {
+    slug: "kawa-roasters",
+    name: "Kawa Roasters",
+    category: "company-profile",
+    domain: "kawa-roasters.vercel.app",
+    status: "live",
+    featured: false,
+    highlight: {
+      en: "A concept specialty coffee roastery in Bandung selling wholesale to cafes, with a quote request form.",
+      id: "Konsep roastery kopi spesialti di Bandung yang menjual grosir ke kafe, dengan formulir permintaan penawaran.",
+    },
+  },
+  {
+    slug: "badot-ngacir-store",
+    name: "Badot Ngacir Store",
+    category: "ecommerce",
+    domain: "badot-ngacir-store.vercel.app",
+    status: "live",
+    featured: false,
+    highlight: {
+      en: "A fictional running store with 80 products, a working cart, a simulated checkout and a bilingual blog.",
+      id: "Toko lari fiktif dengan 80 produk, keranjang yang berfungsi, checkout simulasi, dan blog dwibahasa.",
+    },
+  },
+  {
     slug: "floryn",
     name: "Floryn",
     category: "ecommerce",

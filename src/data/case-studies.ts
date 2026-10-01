@@ -1026,4 +1026,102 @@ export const caseStudies: Record<string, CaseStudy> = {
     },
     stack: ["HTML", "CSS", "JavaScript"],
   },
+
+  "solvara-chemicals": {
+    context: {
+      en: "Solvara Chemicals is a fictional manufacturer of specialty and industrial chemicals, built as a portfolio project. Its buyers are factories, formulators and distributors, who do not browse a shop: they send a specification and ask for a quote.",
+      id: "Solvara Chemicals adalah produsen bahan kimia spesialti dan industri fiktif yang dibangun sebagai proyek portofolio. Pembelinya adalah pabrik, formulator, dan distributor, yang tidak berbelanja seperti di toko: mereka mengirim spesifikasi lalu meminta penawaran.",
+    },
+    approach: {
+      en: "I removed everything a shop would have. There is no cart, no checkout and no price, and a banner at the top says supply is B2B only. The calls to action are Request a Quote, Become a Distributor and Download TDS. Sixteen products sit under five families, each with its own page, and the home page explains the process as batch traceability and agreed specifications rather than slogans. Motion is heavier here than on most of my sites, with Lenis smooth scrolling and GSAP ScrollTrigger over a hero drawn around a single circle.",
+      id: "Saya membuang semua yang biasa ada di toko. Tidak ada keranjang, tidak ada checkout, dan tidak ada harga, dan banner di bagian atas menyatakan bahwa pasokan hanya untuk B2B. Ajakan bertindaknya adalah Request a Quote, Become a Distributor, dan Download TDS. Enam belas produk tersusun dalam lima keluarga, masing-masing punya halamannya, dan beranda menjelaskan prosesnya lewat ketertelusuran batch dan spesifikasi yang disepakati, bukan slogan. Motion di sini lebih berat daripada kebanyakan situs saya, dengan smooth scrolling Lenis dan GSAP ScrollTrigger di atas hero yang dibangun di sekitar satu lingkaran.",
+    },
+    features: {
+      en: [
+        "Eight routes: home, about, products, product detail, industries, capabilities, sustainability and contact",
+        "Sixteen products with their own pages, grouped into five families",
+        "Quote, distributor and technical data sheet actions, all front-end demos",
+        "Forms validated with React Hook Form and Zod, posting to a mock endpoint that stores nothing",
+        "English and Indonesian copy in two files with identical structure, enforced by TypeScript",
+        "A photo fallback that draws a gradient with the brand mark if an image fails",
+      ],
+      id: [
+        "Delapan route: beranda, tentang, produk, detail produk, industri, kapabilitas, keberlanjutan, dan kontak",
+        "Enam belas produk dengan halaman masing-masing, dikelompokkan dalam lima keluarga",
+        "Aksi penawaran, distributor, dan lembar data teknis, semuanya demo front-end",
+        "Formulir tervalidasi dengan React Hook Form dan Zod, dikirim ke endpoint tiruan yang tidak menyimpan apa pun",
+        "Teks bahasa Inggris dan Indonesia di dua file dengan struktur identik, dijaga oleh TypeScript",
+        "Fallback foto yang menggambar gradien dengan tanda brand jika sebuah gambar gagal dimuat",
+      ],
+    },
+    outcome: {
+      en: "The site is live and reads like a supplier a procurement team could shortlist. Its sustainability figures and numbers are portfolio placeholders, and the repository says so.",
+      id: "Situs ini aktif dan terbaca seperti pemasok yang bisa masuk daftar pendek tim pengadaan. Angka keberlanjutan dan angka lainnya adalah placeholder portofolio, dan repositorinya menyatakan hal itu.",
+    },
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP", "Lenis", "React Hook Form", "Zod"],
+  },
+
+  "kawa-roasters": {
+    context: {
+      en: "Kawa Roasters is a concept specialty roastery in Bandung that sells to cafes, restaurants and hotels rather than to individual drinkers. A cafe owner wants to know three things: can they get the same taste every time, how small an order can start, and where the beans come from.",
+      id: "Kawa Roasters adalah konsep roastery kopi spesialti di Bandung yang menjual ke kafe, restoran, dan hotel, bukan ke peminum perorangan. Pemilik kafe ingin tahu tiga hal: apakah rasanya konsisten setiap kali, seberapa kecil pesanan bisa dimulai, dan dari mana biji kopinya berasal.",
+    },
+    approach: {
+      en: "The home page answers those in order. A four-step strip (source, roast, cup, deliver) shows the process, four featured coffees give the range, and the home page names a low starting quantity: five kilograms. A dark look built on a photo of beans in a burlap sack, with a serif headline, sets the tone, and Embla carousels and Lenis scrolling keep the longer pages moving. The header carries a Request a Quote action.",
+      id: "Beranda menjawab ketiganya secara berurutan. Strip empat langkah (source, roast, cup, deliver) menunjukkan prosesnya, empat kopi unggulan memberi gambaran rangkaian produk, dan beranda menyebut jumlah awal yang kecil: lima kilogram. Tampilan gelap berlatar foto biji kopi di karung goni, dengan judul serif, membangun nadanya, dan carousel Embla serta scroll Lenis menjaga halaman yang panjang tetap bergerak. Header memuat aksi Request a Quote.",
+    },
+    features: {
+      en: [
+        "Eight pages: home, about, coffee, roastery, sourcing and quality, wholesale, partners and contact",
+        "Four featured coffees with tasting notes, including two blends for espresso and milk drinks",
+        "A quote request form validated with React Hook Form and Zod, working as a front-end demo",
+        "Embla carousels, Lenis smooth scrolling and Framer Motion reveals",
+        "English and Indonesian versions with a toggle",
+      ],
+      id: [
+        "Delapan halaman: beranda, tentang, kopi, roastery, sourcing dan kualitas, wholesale, mitra, dan kontak",
+        "Empat kopi unggulan dengan catatan rasa, termasuk dua blend untuk espresso dan minuman susu",
+        "Formulir permintaan penawaran yang divalidasi dengan React Hook Form dan Zod, berfungsi sebagai demo front-end",
+        "Carousel Embla, smooth scrolling Lenis, dan reveal Framer Motion",
+        "Versi bahasa Inggris dan Indonesia dengan toggle",
+      ],
+    },
+    outcome: {
+      en: "The site is live and speaks to a cafe owner's actual questions instead of describing coffee in general. The quote form does not send anywhere yet.",
+      id: "Situs ini aktif dan menjawab pertanyaan nyata pemilik kafe, bukan menggambarkan kopi secara umum. Formulir penawarannya belum mengirim ke mana pun.",
+    },
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Lenis", "Embla Carousel", "React Hook Form", "Zod"],
+  },
+
+  "badot-ngacir-store": {
+    context: {
+      en: "Badot Ngacir Store is a fictional running shop in South Tangerang, a personal portfolio project. Its joke is the name: \"Badot\" means stocky, and \"ngacir\" means running fast. The idea behind it is a running store that says plainly it is for every body shape.",
+      id: "Badot Ngacir Store adalah toko perlengkapan lari fiktif di Tangerang Selatan, proyek portofolio pribadi. Candaannya ada di namanya: \"Badot\" berarti gempal, dan \"ngacir\" berarti lari kencang. Gagasannya adalah toko lari yang menyatakan terang-terangan bahwa tokonya untuk semua bentuk badan.",
+    },
+    approach: {
+      en: "It is the most complete shop in this archive. Eighty fictional products across eight categories live in one data file, and the catalog supports filtering, sorting, search and load more. Product pages feed a cart held in Zustand and saved in the browser, which leads to a checkout that simulates couriers, shipping, and payment by transfer, a fake QRIS code or cash on delivery, then issues an order number. Nothing is charged and nothing leaves the browser, and the repository says so. The voice is written in casual Indonesian throughout, with ten bilingual blog posts and a community page for the Sunday dawn run.",
+      id: "Ini toko paling lengkap di arsip ini. Delapan puluh produk fiktif di delapan kategori disimpan dalam satu file data, dan katalognya mendukung filter, pengurutan, pencarian, dan load more. Halaman produk mengalir ke keranjang yang dipegang Zustand dan tersimpan di browser, lalu ke checkout yang mensimulasikan kurir, ongkir, dan pembayaran lewat transfer, kode QRIS tiruan, atau bayar di tempat, kemudian menerbitkan nomor pesanan. Tidak ada yang ditagih dan tidak ada data yang keluar dari browser, dan repositorinya menyatakan hal itu. Gaya tulisannya memakai bahasa Indonesia santai di seluruh situs, dengan sepuluh artikel blog dwibahasa dan halaman komunitas untuk lari subuh tiap Minggu.",
+    },
+    features: {
+      en: [
+        "Catalog of 80 products in 8 categories with filtering, sorting, search and load more",
+        "Product detail pages, a cart and a simulated checkout ending in an order confirmation",
+        "Ten blog articles in two languages, plus community, about and contact pages with a real map",
+        "Bold condensed type, a running marquee, staggered hero and page transitions, all respecting reduced motion",
+        "Indonesian and English with a toggle that remembers the choice",
+      ],
+      id: [
+        "Katalog 80 produk di 8 kategori dengan filter, pengurutan, pencarian, dan load more",
+        "Halaman detail produk, keranjang, dan checkout simulasi yang berakhir di konfirmasi pesanan",
+        "Sepuluh artikel blog dalam dua bahasa, plus halaman komunitas, tentang, dan kontak dengan peta sungguhan",
+        "Huruf tebal yang rapat, marquee berjalan, hero bertahap, dan transisi halaman, semuanya menghormati pengaturan reduced motion",
+        "Bahasa Indonesia dan Inggris dengan toggle yang mengingat pilihan",
+      ],
+    },
+    outcome: {
+      en: "The store is live end to end, from browsing to an order number. I also fixed product photos that showed real brands and a products page that was falling back to client-side rendering.",
+      id: "Tokonya aktif dari ujung ke ujung, dari menelusuri produk sampai nomor pesanan. Saya juga memperbaiki foto produk yang menampilkan merek asli dan halaman produk yang jatuh ke client-side rendering.",
+    },
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion", "Zustand", "React Hook Form", "Zod"],
+  },
 };

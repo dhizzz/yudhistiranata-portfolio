@@ -20,8 +20,6 @@ export const dictionary = {
     home: {
       mastheadLeft: "Web Developer",
       mastheadRight: "Portfolio",
-      factStudy: "Study",
-      factStudyValue: "Computer Science, Universitas Pamulang",
       factStack: "Core stack",
       factFocus: "Focus",
       factFocusValue: "Websites and web apps for businesses",
@@ -99,8 +97,6 @@ export const dictionary = {
       factFocus: "Focus",
       factFocusValue: "Websites and web apps for businesses",
       factStack: "Core stack",
-      factEducation: "Education",
-      factEducationValue: "Computer Science, Universitas Pamulang",
       principlesTitle: "How I work",
       principles: [
         {
@@ -177,8 +173,6 @@ export const dictionary = {
     home: {
       mastheadLeft: "Web Developer",
       mastheadRight: "Portofolio",
-      factStudy: "Studi",
-      factStudyValue: "Ilmu Komputer, Universitas Pamulang",
       factStack: "Stack utama",
       factFocus: "Fokus",
       factFocusValue: "Website dan aplikasi web untuk bisnis",
@@ -256,8 +250,6 @@ export const dictionary = {
       factFocus: "Fokus",
       factFocusValue: "Website dan aplikasi web untuk bisnis",
       factStack: "Stack utama",
-      factEducation: "Pendidikan",
-      factEducationValue: "Ilmu Komputer, Universitas Pamulang",
       principlesTitle: "Cara saya bekerja",
       principles: [
         {

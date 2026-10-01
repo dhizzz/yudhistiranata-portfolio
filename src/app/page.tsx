@@ -84,7 +84,6 @@ export default function Home() {
               {[
                 { term: t.home.factFocus, value: t.home.factFocusValue },
                 { term: t.home.factStack, value: "Next.js, React, TypeScript" },
-                { term: t.home.factStudy, value: t.home.factStudyValue },
               ].map((fact) => (
                 <div
                   key={fact.term}
