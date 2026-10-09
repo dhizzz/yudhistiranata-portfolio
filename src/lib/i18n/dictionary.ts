@@ -23,6 +23,8 @@ export const dictionary = {
       factStack: "Core stack",
       factFocus: "Focus",
       factFocusValue: "Websites and web apps for businesses",
+      factStudy: "Study",
+      factStudyValue: "Computer Science, Universitas Pamulang",
       heroBefore: "Websites designed around",
       heroAccent: "how your business works.",
       heroIntro:
@@ -96,6 +98,8 @@ export const dictionary = {
       ],
       factFocus: "Focus",
       factFocusValue: "Websites and web apps for businesses",
+      factEducation: "Education",
+      factEducationValue: "Computer Science, Universitas Pamulang",
       factStack: "Core stack",
       principlesTitle: "How I work",
       principles: [
@@ -176,6 +180,8 @@ export const dictionary = {
       factStack: "Stack utama",
       factFocus: "Fokus",
       factFocusValue: "Website dan aplikasi web untuk bisnis",
+      factStudy: "Studi",
+      factStudyValue: "Ilmu Komputer, Universitas Pamulang",
       heroBefore: "Website yang dirancang mengikuti",
       heroAccent: "cara bisnis Anda bekerja.",
       heroIntro:
@@ -249,6 +255,8 @@ export const dictionary = {
       ],
       factFocus: "Fokus",
       factFocusValue: "Website dan aplikasi web untuk bisnis",
+      factEducation: "Pendidikan",
+      factEducationValue: "Ilmu Komputer, Universitas Pamulang",
       factStack: "Stack utama",
       principlesTitle: "Cara saya bekerja",
       principles: [

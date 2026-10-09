@@ -291,6 +291,42 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "auvelle",
+    name: "Auvelle",
+    category: "ecommerce",
+    domain: "auvelle-psi.vercel.app",
+    status: "live",
+    featured: false,
+    highlight: {
+      en: "A skincare manufacturer and brand in one site: private label and OEM enquiries on one side, an eleven-item shop with an order-request checkout on the other.",
+      id: "Situs produsen sekaligus brand skincare: permintaan private label dan OEM di satu sisi, toko sebelas item dengan checkout permintaan pesanan di sisi lain.",
+    },
+  },
+  {
+    slug: "kadu-developer",
+    name: "Kadu Developer",
+    category: "company-profile",
+    domain: "kadu-developer.vercel.app",
+    status: "live",
+    featured: false,
+    highlight: {
+      en: "A fictional indie game studio site with eight games, a devlog and a press kit, built around a durian mascot and heavy scroll motion.",
+      id: "Situs studio game indie fiktif dengan delapan game, devlog, dan press kit, dibangun di sekitar maskot durian dan motion scroll yang kuat.",
+    },
+  },
+  {
+    slug: "tenuva-textiles",
+    name: "Tenuva Textiles",
+    category: "company-profile",
+    domain: "tenuva.vercel.app",
+    status: "live",
+    featured: false,
+    highlight: {
+      en: "A fictional B2B textile manufacturer with sixteen fabric pages and swatch-led enquiries, with no prices, cart or checkout.",
+      id: "Produsen tekstil B2B fiktif dengan enam belas halaman kain dan permintaan yang dimulai dari swatch, tanpa harga, keranjang, atau checkout.",
+    },
+  },
+  {
     slug: "floryn",
     name: "Floryn",
     category: "ecommerce",

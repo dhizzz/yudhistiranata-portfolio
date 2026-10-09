@@ -1124,4 +1124,110 @@ export const caseStudies: Record<string, CaseStudy> = {
     },
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion", "Zustand", "React Hook Form", "Zod"],
   },
+
+  auvelle: {
+    context: {
+      en: "Auvelle presents itself as an Indonesian skincare manufacturer and brand. That means one site with two audiences: a founder looking for a lab to make their product, and a shopper putting together a routine.",
+      id: "Auvelle memperkenalkan diri sebagai produsen sekaligus brand skincare Indonesia. Artinya satu situs untuk dua audiens: pendiri brand yang mencari lab untuk memproduksi produknya, dan pembeli yang menyusun rutinitas perawatan kulit.",
+    },
+    approach: {
+      en: "The first screen splits the visitor: Partner with our lab for brands, Shop Auvelle for everyone else. The manufacturing side explains private label, OEM and ODM as five steps from brief to delivery, and a lab page and a journal carry the technical detail. The shop is organised around a four-step routine (cleanse, treat, moisturize, protect). Checkout takes no payment: customers send an order request and the team confirms stock, shipping and payment by email or WhatsApp. The enquiry and order endpoints validate on the server and ignore submissions that fill a hidden honeypot field, and until an email service is configured they accept the request and send nothing. All copy lives in matching English and Indonesian files, and the build fails if one language misses a key.",
+      id: "Layar pertama langsung membagi pengunjung: Partner with our lab untuk brand, Shop Auvelle untuk semua orang lainnya. Sisi manufaktur menjelaskan private label, OEM, dan ODM sebagai lima langkah dari brief hingga pengiriman, dan halaman lab serta jurnal memuat detail teknisnya. Tokonya disusun di sekitar rutinitas empat langkah (cleanse, treat, moisturize, protect). Checkout tidak menerima pembayaran: pelanggan mengirim permintaan pesanan dan tim mengonfirmasi stok, ongkir, dan pembayaran lewat email atau WhatsApp. Endpoint pertanyaan dan pesanan memvalidasi di server dan mengabaikan kiriman yang mengisi kolom honeypot tersembunyi, dan selama layanan email belum dikonfigurasi, endpoint hanya menerima permintaan tanpa mengirim apa pun. Seluruh teks tersimpan di file bahasa Inggris dan Indonesia yang bentuknya sama, dan build gagal jika salah satu bahasa kehilangan kunci.",
+    },
+    features: {
+      en: [
+        "Home, about, manufacturing, lab, shop, product, checkout, journal, contact, privacy and terms pages",
+        "Private label, OEM and ODM manufacturing explained as a five-step process",
+        "A shop of eleven items built around a four-step routine, including a ritual set, with a cart and an order-request checkout",
+        "Six journal articles and a separate lab page",
+        "Server-validated forms with a honeypot field and optional email delivery through Resend",
+        "English and Indonesian copy kept in matching files, checked by the TypeScript build",
+        "Motion and Lenis smooth scrolling",
+      ],
+      id: [
+        "Halaman beranda, tentang, manufaktur, lab, toko, produk, checkout, jurnal, kontak, privasi, dan ketentuan",
+        "Manufaktur private label, OEM, dan ODM yang dijelaskan sebagai proses lima langkah",
+        "Toko sebelas item yang disusun di sekitar rutinitas empat langkah, termasuk satu set ritual, dengan keranjang dan checkout permintaan pesanan",
+        "Enam artikel jurnal dan satu halaman lab tersendiri",
+        "Formulir yang divalidasi di server dengan kolom honeypot dan pengiriman email opsional lewat Resend",
+        "Teks bahasa Inggris dan Indonesia di file yang bentuknya sama, diperiksa oleh build TypeScript",
+        "Motion dan smooth scrolling Lenis",
+      ],
+    },
+    outcome: {
+      en: "The site is live with its shop, manufacturing pages and journal in two languages. Checkout collects order requests rather than payments, and the forms send nothing until an email service is connected.",
+      id: "Situs ini aktif dengan toko, halaman manufaktur, dan jurnal dalam dua bahasa. Checkout mengumpulkan permintaan pesanan, bukan pembayaran, dan formulirnya belum mengirim apa pun sampai layanan email dihubungkan.",
+    },
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion", "Lenis", "React Hook Form", "Zod"],
+  },
+
+  "kadu-developer": {
+    context: {
+      en: "Kadu Developer is a fictional independent game studio from Tangerang, built as a portfolio project. A studio site has to sell a feeling before it sells a game, so the brief was a personality: spiky outside, sweet inside, with a durian as the mascot.",
+      id: "Kadu Developer adalah studio game independen fiktif dari Tangerang, dibangun sebagai proyek portofolio. Situs studio harus menjual perasaan sebelum menjual game, jadi brief-nya berupa kepribadian: berduri di luar, manis di dalam, dengan durian sebagai maskot.",
+    },
+    approach: {
+      en: "Everything here is made to be played with. Headlines reveal word by word inside masks, pages change with a thorn-shaped wipe, and game cards bend under the cursor through an SVG displacement filter that only runs with a fine pointer and without reduced motion. The site is fully static with no backend, and the language toggle works on the client, so the server pages are thin wrappers around client views. I switched off two Next.js 16 caching features that the scaffold enabled, because keeping hidden routes alive fought the page transition and ScrollTrigger. A notes file lists every placeholder: the download counts, ratings, release dates, store links and privacy text are invented, and the privacy page is marked as a template.",
+      id: "Semua di sini dibuat untuk dimainkan. Judul muncul kata demi kata di dalam mask, halaman berganti dengan wipe berbentuk duri, dan kartu game melengkung mengikuti kursor lewat filter displacement SVG yang hanya berjalan dengan pointer halus dan tanpa reduced motion. Situs ini sepenuhnya statis tanpa backend, dan toggle bahasanya bekerja di client, jadi halaman server hanyalah pembungkus tipis untuk tampilan client. Saya mematikan dua fitur caching Next.js 16 yang diaktifkan scaffold, karena menjaga route tersembunyi tetap hidup bertabrakan dengan transisi halaman dan ScrollTrigger. File catatan mendaftar setiap placeholder: jumlah unduhan, rating, tanggal rilis, link toko, dan teks privasi adalah rekaan, dan halaman privasinya ditandai sebagai template.",
+    },
+    features: {
+      en: [
+        "Home, games, game detail, devlog, about, press, contact and privacy pages",
+        "Eight fictional games across Android and PC, with status labels from announced to released",
+        "A devlog with individual posts",
+        "A press page with wordmark and mascot SVGs",
+        "Word-by-word headline reveals, a thorn-shaped page transition and a displacement hover effect",
+        "GSAP ScrollTrigger, Lenis and Framer Motion, with English and Indonesian through next-intl",
+      ],
+      id: [
+        "Halaman beranda, game, detail game, devlog, tentang, press, kontak, dan privasi",
+        "Delapan game fiktif di Android dan PC, dengan label status dari diumumkan hingga dirilis",
+        "Devlog dengan pos tersendiri",
+        "Halaman press dengan SVG wordmark dan maskot",
+        "Judul yang muncul kata demi kata, transisi halaman berbentuk duri, dan efek displacement saat hover",
+        "GSAP ScrollTrigger, Lenis, dan Framer Motion, dengan bahasa Inggris dan Indonesia lewat next-intl",
+      ],
+    },
+    outcome: {
+      en: "The site is live as a complete studio presence. Its numbers, store links and legal text are placeholders by design, listed in the repository so none of them can pass for real.",
+      id: "Situs ini aktif sebagai kehadiran studio yang lengkap. Angka, link toko, dan teks hukumnya adalah placeholder yang disengaja, didaftar di repositori agar tidak ada yang bisa dianggap asli.",
+    },
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP", "Lenis", "next-intl"],
+  },
+
+  "tenuva-textiles": {
+    context: {
+      en: "Tenuva Textiles is a fictional integrated textile manufacturer that I built as a portfolio project, a sibling of Solvara Chemicals in structure. Its buyers are garment makers, brands and distributors, who judge a mill by whether the cloth behaves the same in every lot.",
+      id: "Tenuva Textiles adalah produsen tekstil terintegrasi fiktif yang saya bangun sebagai proyek portofolio, saudara Solvara Chemicals dari sisi struktur. Pembelinya adalah pembuat garmen, brand, dan distributor, yang menilai sebuah pabrik dari apakah kainnya berperilaku sama di setiap lot.",
+    },
+    approach: {
+      en: "I used the same B2B approach as Solvara: no prices, cart or checkout, and a banner saying supply is B2B only. What changes is the content. Sixteen fabrics sit under yarn, woven, knit, denim and twill, and technical families, named by construction and weight, such as cotton twill 240 and indigo denim 12 oz. The buying process is told from the buyer's side as brief, swatch and lab dip, sampling, production and delivery, under a line about holding the cloth first. Forms validate on the client and post to a mock endpoint that stores nothing. English is the source of truth for the dictionary and Indonesian is typed against it, so a missing key fails the type check. Photos fall back to a gradient with the weave mark if one fails to load, and the site ships a sitemap, a robots file and a generated Open Graph image. Certification wording, statistics and sustainability targets are illustrative, and the repository says so.",
+      id: "Saya memakai pendekatan B2B yang sama dengan Solvara: tanpa harga, keranjang, atau checkout, dan banner yang menyatakan pasokan hanya untuk B2B. Yang berbeda adalah isinya. Enam belas kain tersusun dalam keluarga benang, tenun, rajut, denim dan twill, serta teknis, dinamai menurut konstruksi dan bobot, seperti cotton twill 240 dan indigo denim 12 oz. Proses pembelian diceritakan dari sisi pembeli sebagai brief, swatch dan lab dip, sampling, produksi, dan pengiriman, di bawah kalimat tentang memegang kainnya lebih dulu. Formulir divalidasi di client dan dikirim ke endpoint tiruan yang tidak menyimpan apa pun. Bahasa Inggris menjadi sumber kebenaran kamus dan bahasa Indonesia diketik terhadapnya, sehingga kunci yang hilang membuat pemeriksaan tipe gagal. Foto jatuh ke gradien dengan tanda tenun jika gagal dimuat, dan situs ini menyertakan sitemap, file robots, dan gambar Open Graph yang dihasilkan otomatis. Kata-kata sertifikasi, statistik, dan target keberlanjutan hanya ilustrasi, dan repositorinya menyatakan hal itu.",
+    },
+    features: {
+      en: [
+        "Eight routes: home, about, products, product detail, industries, capabilities, sustainability and contact",
+        "Sixteen fabrics across five families, each with its own page",
+        "A swatch and lab dip step in the buying process, with swatches requested from the sales team",
+        "Quote and contact forms built with React Hook Form and Zod, posting to a mock endpoint",
+        "A weave-pattern hero with GSAP ScrollTrigger and Lenis smooth scrolling",
+        "Sitemap, robots file and a generated Open Graph image",
+        "English and Indonesian files with identical structure, enforced by TypeScript",
+      ],
+      id: [
+        "Delapan route: beranda, tentang, produk, detail produk, industri, kapabilitas, keberlanjutan, dan kontak",
+        "Enam belas kain di lima keluarga, masing-masing dengan halamannya sendiri",
+        "Langkah swatch dan lab dip dalam proses pembelian, dengan swatch yang diminta lewat tim sales",
+        "Formulir penawaran dan kontak dengan React Hook Form dan Zod, dikirim ke endpoint tiruan",
+        "Hero bermotif tenun dengan GSAP ScrollTrigger dan smooth scrolling Lenis",
+        "Sitemap, file robots, dan gambar Open Graph yang dihasilkan otomatis",
+        "File bahasa Inggris dan Indonesia dengan struktur identik, dijaga oleh TypeScript",
+      ],
+    },
+    outcome: {
+      en: "The site is live and reads like a mill a buyer could shortlist. Its statistics and sustainability targets are illustrative, and nothing is stored or sent.",
+      id: "Situs ini aktif dan terbaca seperti pabrik yang bisa masuk daftar pendek pembeli. Statistik dan target keberlanjutannya hanya ilustrasi, dan tidak ada yang disimpan maupun dikirim.",
+    },
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP", "Lenis", "React Hook Form", "Zod"],
+  },
 };
