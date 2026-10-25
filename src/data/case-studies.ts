@@ -1230,4 +1230,452 @@ export const caseStudies: Record<string, CaseStudy> = {
     },
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP", "Lenis", "React Hook Form", "Zod"],
   },
+
+  "sweta-sugar": {
+    context: {
+      en: "Sweta Sugar presents itself as an integrated cane sugar mill and refinery in Central Lampung that supplies businesses only: food and beverage makers, bakeries, hotels, cafes, distributors and export traders. A buyer like that wants consistency and paperwork, not a shop window.",
+      id: "Sweta Sugar memperkenalkan diri sebagai pabrik dan kilang gula tebu terintegrasi di Lampung Tengah yang hanya memasok bisnis: produsen makanan dan minuman, toko roti, hotel, kafe, distributor, dan pedagang ekspor. Pembeli seperti itu menginginkan konsistensi dan dokumen, bukan etalase.",
+    },
+    approach: {
+      en: "I built it as a server-rendered Flask 3 site with Jinja2 templates, with English at the root and Indonesian under /id. All copy sits in YAML files with the same keys in both languages, and each product carries its own English and Indonesian block. The page structure follows a buyer's questions: the range of eight products, the process from cane to crystal, quality as testing at every stage, traceability to the lot with a certificate of analysis, then sustainability and a partnership page for quote requests. A script optimises the source photos into WebP files with a manifest, an Open Graph image and a touch icon, and a lint script renders every route in both languages and checks the output and the content files.",
+      id: "Saya membangunnya sebagai situs Flask 3 yang dirender di server dengan template Jinja2, berbahasa Inggris di root dan bahasa Indonesia di bawah /id. Seluruh teks tersimpan di file YAML dengan kunci yang sama di kedua bahasa, dan setiap produk membawa blok bahasa Inggris dan Indonesianya sendiri. Susunan halaman mengikuti pertanyaan pembeli: rangkaian delapan produk, proses dari tebu hingga kristal, kualitas berupa pengujian di setiap tahap, ketertelusuran hingga lot dengan sertifikat analisis, lalu keberlanjutan dan halaman kemitraan untuk permintaan penawaran. Sebuah skrip mengoptimalkan foto sumber menjadi file WebP lengkap dengan manifes, gambar Open Graph, dan ikon sentuh, dan skrip lint merender setiap route di kedua bahasa lalu memeriksa hasil dan file kontennya.",
+    },
+    features: {
+      en: [
+        "Home, about, products, product detail, process, quality, sustainability, partnership, contact and legal pages",
+        "Eight products, from refined white, caster and icing sugar to golden cane, soft brown and liquid cane, and portion packs",
+        "English at the root and Indonesian under /id, with matching keys in both content files",
+        "An image pipeline that writes WebP files, a manifest, an Open Graph image and a touch icon",
+        "A lint script that renders every route in both languages",
+        "Deployed on Vercel as a Flask app with no build command",
+      ],
+      id: [
+        "Halaman beranda, tentang, produk, detail produk, proses, kualitas, keberlanjutan, kemitraan, kontak, dan legal",
+        "Delapan produk, dari gula putih halus, caster, dan icing hingga gula tebu keemasan, gula merah lembut, dan gula tebu cair, serta kemasan porsi",
+        "Bahasa Inggris di root dan bahasa Indonesia di bawah /id, dengan kunci yang sama di kedua file konten",
+        "Pipeline gambar yang menghasilkan file WebP, manifes, gambar Open Graph, dan ikon sentuh",
+        "Skrip lint yang merender setiap route di kedua bahasa",
+        "Di-deploy di Vercel sebagai aplikasi Flask tanpa perintah build",
+      ],
+    },
+    outcome: {
+      en: "The site is live as a calm, quote-led supplier profile in two languages, written in Python rather than JavaScript.",
+      id: "Situs ini aktif sebagai profil pemasok yang tenang dan berbasis permintaan penawaran dalam dua bahasa, ditulis dengan Python, bukan JavaScript.",
+    },
+    stack: ["Python", "Flask", "Jinja2", "YAML"],
+  },
+
+  "teduh-tea": {
+    context: {
+      en: "Teduh Tea presents itself as a highland tea producer in West Java that grows, withers, rolls and packs its leaves in one place. It sells to tea lovers and also to cafes, hotels and shops, so the site had to feel like a quiet moment and still carry a wholesale route.",
+      id: "Teduh Tea memperkenalkan diri sebagai produsen teh dataran tinggi di Jawa Barat yang menanam, melayukan, menggulung, dan mengemas daunnya di satu tempat. Produknya dijual ke penikmat teh dan juga ke kafe, hotel, dan toko, jadi situsnya harus terasa seperti momen tenang sekaligus punya jalur grosir.",
+    },
+    approach: {
+      en: "The name means the cool calm of shade, so the design is slow: a hillside photo, a preloader and a serif headline with an italic accent. The ten teas sit in five categories (black, green, scented, white and oolong, herbal) and can also be found by moment of day, with a short list for morning, afternoon and evening. The process is told as seven quiet steps, and a brew guide covers the cup itself. The wholesale enquiry form validates on the server. When Supabase credentials are set it saves each enquiry to a table; without them it only logs the submission, so the form never fails for a missing database. The site is a Flask app with English and Indonesian locale files, and two scripts check that the locale files match and that the text follows the writing rules.",
+      id: "Namanya berarti ketenangan teduh di bawah naungan, jadi desainnya pelan: foto lereng bukit, preloader, dan judul serif dengan aksen italic. Sepuluh teh tersusun dalam lima kategori (hitam, hijau, beraroma, putih dan oolong, herbal) dan bisa juga ditemukan menurut waktu minum, dengan daftar singkat untuk pagi, siang, dan malam. Prosesnya diceritakan sebagai tujuh langkah yang tenang, dan panduan seduh membahas cangkirnya sendiri. Formulir pertanyaan grosir divalidasi di server. Ketika kredensial Supabase diatur, setiap pertanyaan disimpan ke tabel; tanpa itu, kiriman hanya dicatat di log, sehingga formulir tidak pernah gagal karena database tidak ada. Situsnya adalah aplikasi Flask dengan file locale bahasa Inggris dan Indonesia, dan dua skrip memeriksa bahwa file locale cocok dan bahwa teksnya mengikuti aturan penulisan.",
+    },
+    features: {
+      en: [
+        "Home, teas, tea detail, process, quality, brew guide, about and contact pages",
+        "Ten teas in five categories, with a finder by moment of day",
+        "A seven-step process page and a brew guide",
+        "A wholesale enquiry form validated on the server, saved to Supabase when configured and logged otherwise",
+        "English and Indonesian locale files, with a script that checks they match",
+        "An image script that produces responsive widths",
+      ],
+      id: [
+        "Halaman beranda, teh, detail teh, proses, kualitas, panduan seduh, tentang, dan kontak",
+        "Sepuluh teh dalam lima kategori, dengan pencari menurut waktu minum",
+        "Halaman proses tujuh langkah dan panduan seduh",
+        "Formulir pertanyaan grosir yang divalidasi di server, disimpan ke Supabase jika dikonfigurasi dan dicatat di log jika tidak",
+        "File locale bahasa Inggris dan Indonesia, dengan skrip yang memeriksa kecocokannya",
+        "Skrip gambar yang menghasilkan beberapa lebar responsif",
+      ],
+    },
+    outcome: {
+      en: "The site is live with the full tea range and a wholesale route, and it keeps working without a database because enquiries fall back to the log.",
+      id: "Situs ini aktif dengan seluruh rangkaian teh dan jalur grosir, dan tetap bekerja tanpa database karena pertanyaan jatuh ke log.",
+    },
+    stack: ["Python", "Flask", "Jinja2", "Supabase"],
+  },
+
+  meridex: {
+    context: {
+      en: "Meridex is a personal portfolio project: a non-custodial crypto exchange demo. There are no real funds, no custody and no real order execution. The goal was to show how a trading interface can feel fast and clear while staying honest that it is a demo.",
+      id: "Meridex adalah proyek portofolio pribadi: demo exchange kripto non-custodial. Tidak ada dana sungguhan, tidak ada penyimpanan aset, dan tidak ada eksekusi order sungguhan. Tujuannya menunjukkan bagaimana antarmuka trading bisa terasa cepat dan jelas sambil tetap jujur bahwa ini demo.",
+    },
+    approach: {
+      en: "Every order runs against a virtual balance of 10,000 USDT kept in the browser. Live prices come through an API route, the charts use lightweight-charts with indicators, and the swap uses a constant-product formula. A small Python FastAPI layer calculates indicators, swap quotes, order book simulation and earn projections, and each of those features has a TypeScript fallback, so every page still works without the Python server. The testnet wallet view reads Ethereum Sepolia and Base Sepolia through wagmi, viem and RainbowKit and never writes. The site is dark first, respects reduced motion, and includes a small academy that explains exchanges, wallets and scams.",
+      id: "Setiap order berjalan terhadap saldo virtual 10.000 USDT yang disimpan di browser. Harga langsung datang lewat sebuah API route, grafiknya memakai lightweight-charts dengan indikator, dan swap memakai rumus constant-product. Lapisan Python FastAPI yang kecil menghitung indikator, kutipan swap, simulasi order book, dan proyeksi earn, dan setiap fitur itu punya cadangan TypeScript, sehingga semua halaman tetap berfungsi tanpa server Python. Tampilan wallet testnet membaca Ethereum Sepolia dan Base Sepolia lewat wagmi, viem, dan RainbowKit dan tidak pernah menulis. Situs ini mengutamakan mode gelap, menghormati reduced motion, dan menyertakan akademi kecil yang menjelaskan exchange, wallet, dan penipuan.",
+    },
+    features: {
+      en: [
+        "Markets and trade pages with candlestick charts and indicators",
+        "Paper trading on a virtual 10,000 USDT balance stored in the browser",
+        "A swap priced with a constant-product formula, and an earnings calculator",
+        "A read-only testnet wallet view for Ethereum Sepolia and Base Sepolia",
+        "Learn pages on exchanges, wallets and spotting scams",
+        "A Python layer with its own tests, and a TypeScript fallback for each feature",
+        "English and Indonesian versions with a toggle",
+      ],
+      id: [
+        "Halaman pasar dan trade dengan grafik candlestick dan indikator",
+        "Paper trading dengan saldo virtual 10.000 USDT yang disimpan di browser",
+        "Swap yang dihitung dengan rumus constant-product, dan kalkulator pendapatan",
+        "Tampilan wallet testnet read-only untuk Ethereum Sepolia dan Base Sepolia",
+        "Halaman belajar tentang exchange, wallet, dan mengenali penipuan",
+        "Lapisan Python dengan tes sendiri, dan cadangan TypeScript untuk setiap fitur",
+        "Versi bahasa Inggris dan Indonesia dengan toggle",
+      ],
+    },
+    outcome: {
+      en: "The demo is live and says so plainly, starting with a banner at the top of the site that reads demo mode, no real funds.",
+      id: "Demo ini aktif dan menyatakannya dengan jelas, dimulai dari banner di bagian atas situs yang menyebut mode demo, tanpa dana sungguhan.",
+    },
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion", "Lenis", "wagmi", "Python", "FastAPI"],
+  },
+
+  embun: {
+    context: {
+      en: "Embun presents itself as a natural soap brand from Bogor, West Java, selling bar and liquid soaps coloured only by pigments from nature. With a range of 77 soaps, the site had to read as a calm brand story and still make a large catalog easy to enter.",
+      id: "Embun memperkenalkan diri sebagai brand sabun alami dari Bogor, Jawa Barat, yang menjual sabun batang dan cair dengan warna yang hanya berasal dari pigmen alam. Dengan 77 jenis sabun, situsnya harus terbaca sebagai cerita brand yang tenang dan tetap membuat katalog besar mudah dimasuki.",
+    },
+    approach: {
+      en: "The story starts with what touches the skin: plant oils, real botanicals and colours such as turmeric, spirulina, butterfly pea, hibiscus, bamboo charcoal and undyed oat, each given its own place on the ingredients page. A featured collection of six soaps opens the catalog, and the process is shown as select, craft, test. The site is built with Next.js 15 and statically generates its routes. Scripts keep it honest: one checks that the English and Indonesian dictionaries match key by key, one fails on em dashes and banned placeholder wording, one requests every image (36 site photos and 77 product photos) and fails if any is gone, and one runs the type and lint checks together.",
+      id: "Ceritanya dimulai dari apa yang menyentuh kulit: minyak nabati, bahan botani asli, dan warna seperti kunyit, spirulina, bunga telang, hibiscus, arang bambu, dan oat tanpa pewarna, masing-masing punya tempat sendiri di halaman bahan. Koleksi unggulan enam sabun membuka katalog, dan prosesnya ditampilkan sebagai pilih, buat, uji. Situs ini dibangun dengan Next.js 15 dan menghasilkan route-nya secara statis. Skrip menjaga kejujurannya: satu memeriksa bahwa kamus bahasa Inggris dan Indonesia cocok kunci demi kunci, satu gagal jika ada tanda pisah panjang atau kata placeholder terlarang, satu meminta setiap gambar (36 foto situs dan 77 foto produk) dan gagal jika ada yang hilang, dan satu menjalankan pemeriksaan tipe dan lint sekaligus.",
+    },
+    features: {
+      en: [
+        "Home, products, product detail, ingredients, process, quality, about and where-to-buy pages",
+        "A range of 77 soaps with product photos",
+        "An ingredients page built around plant pigments such as turmeric, spirulina and butterfly pea",
+        "An instant English and Indonesian switch, checked by a script for matching keys",
+        "A script that requests every site and product image",
+        "Canonical URLs, a sitemap, robots file and structured data",
+      ],
+      id: [
+        "Halaman beranda, produk, detail produk, bahan, proses, kualitas, tentang, dan tempat membeli",
+        "Rangkaian 77 sabun dengan foto produk",
+        "Halaman bahan yang dibangun di sekitar pigmen tumbuhan seperti kunyit, spirulina, dan bunga telang",
+        "Pergantian bahasa Inggris dan Indonesia seketika, diperiksa skrip untuk kecocokan kunci",
+        "Skrip yang meminta setiap gambar situs dan produk",
+        "URL kanonik, sitemap, file robots, dan data terstruktur",
+      ],
+    },
+    outcome: {
+      en: "The profile is live in two languages, with a catalog of 77 soaps and checks that fail loudly if a translation or an image goes missing.",
+      id: "Profil ini aktif dalam dua bahasa, dengan katalog 77 sabun dan pemeriksaan yang gagal dengan jelas jika terjemahan atau gambar hilang.",
+    },
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion", "Lenis", "Embla Carousel", "React Hook Form", "Zod"],
+  },
+
+  arunika: {
+    context: {
+      en: "Arunika presents itself as a smartphone maker in Cikarang, West Java, with two lines: Fajar for every day and Petir for play. The site leans on a point of view rather than a spec sheet: phones made slowly, in the best way.",
+      id: "Arunika memperkenalkan diri sebagai pembuat ponsel di Cikarang, Jawa Barat, dengan dua lini: Fajar untuk sehari-hari dan Petir untuk bermain. Situsnya bersandar pada sudut pandang, bukan lembar spesifikasi: ponsel yang dibuat pelan-pelan, dengan cara terbaik.",
+    },
+    approach: {
+      en: "The home page gives the idea one headline, then splits into the two families, each with its own character and its own page. The process is walked through from design and component sourcing to the sealed box, and quality is told through testing, under a headline about breaking phones so you do not have to. People who use the phones appear in a section on the home page, campaigns have their own page, and another section helps visitors find stores. The site runs on Next.js 16 with next-intl, English at the root and Indonesian under /id, Motion and Lenis for movement, and a contact form that sends email through Resend only when the keys are set.",
+      id: "Beranda memberi gagasannya satu judul, lalu terbagi menjadi dua keluarga, masing-masing dengan karakter dan halamannya sendiri. Prosesnya ditelusuri dari desain dan pengadaan komponen sampai kotak tersegel, dan kualitas diceritakan lewat pengujian, di bawah judul tentang merusak ponsel agar pelanggan tidak perlu. Orang-orang yang memakai ponselnya tampil di satu bagian di beranda, kampanye punya halaman sendiri, dan bagian lain membantu pengunjung menemukan toko. Situs ini berjalan di Next.js 16 dengan next-intl, bahasa Inggris di root dan bahasa Indonesia di bawah /id, Motion dan Lenis untuk gerakan, dan formulir kontak yang mengirim email lewat Resend hanya ketika kuncinya diatur.",
+    },
+    features: {
+      en: [
+        "Home, phones, phone detail, gaming, process, quality, campaigns, about and contact pages",
+        "Two phone families, Fajar and Petir, each with its own detail pages",
+        "A process section from design to sealed box, and a quality page built around testing",
+        "A store-finder section and a separate campaigns page",
+        "English at the root and Indonesian under /id through next-intl",
+        "A contact form that sends email through Resend when configured",
+      ],
+      id: [
+        "Halaman beranda, ponsel, detail ponsel, gaming, proses, kualitas, kampanye, tentang, dan kontak",
+        "Dua keluarga ponsel, Fajar dan Petir, masing-masing dengan halaman detailnya",
+        "Bagian proses dari desain hingga kotak tersegel, dan halaman kualitas yang berpusat pada pengujian",
+        "Bagian pencari toko dan halaman kampanye",
+        "Bahasa Inggris di root dan bahasa Indonesia di bawah /id lewat next-intl",
+        "Formulir kontak yang mengirim email lewat Resend jika dikonfigurasi",
+      ],
+    },
+    outcome: {
+      en: "The site is live in both languages, and the contact form degrades quietly when no email key is configured.",
+      id: "Situs ini aktif dalam kedua bahasa, dan formulir kontaknya tetap tenang ketika kunci email belum dikonfigurasi.",
+    },
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion", "Lenis", "next-intl", "Resend"],
+  },
+
+  "bad-kerning": {
+    context: {
+      en: "Bad Kerning presents itself as a streetwear label from Bandung whose whole idea is being wrong on purpose. The site had to look deliberately off while working properly: a typographic joke that never gets in the way of buying a hoodie.",
+      id: "Bad Kerning memperkenalkan diri sebagai label streetwear dari Bandung yang seluruh idenya adalah sengaja salah. Situsnya harus terlihat sengaja janggal sambil tetap berfungsi dengan benar: lelucon tipografi yang tidak pernah menghalangi orang membeli hoodie.",
+    },
+    approach: {
+      en: "I built it with no framework: plain HTML pages, CSS and native ES modules, with GSAP vendored locally. Clean free photos of plain garments do not exist, so every garment base is a flat SVG drawing and a print renderer lays HTML and CSS artwork on top, which lets all 24 products appear in every listed colourway. The hero wordmark has bad kerning that fixes itself, briefly, when the mouse moves, and stickers such as NOT FINAL and TEMP stay in English in the Indonesian version because they are part of the look. Orders end as a WhatsApp message. The header and footer fill in from a module before first paint, into placeholders with reserved heights so nothing shifts, and the fonts are self-hosted. A handover note lists every value to replace before launch, including the WhatsApp number, which is still a placeholder.",
+      id: "Saya membangunnya tanpa framework: halaman HTML murni, CSS, dan modul ES native, dengan GSAP yang disertakan secara lokal. Foto bersih gratis untuk garmen polos tidak ada, jadi setiap dasar garmen adalah gambar SVG datar dan sebuah renderer cetak menumpuk karya HTML dan CSS di atasnya, sehingga ke-24 produk bisa tampil di setiap pilihan warna. Wordmark di hero punya kerning buruk yang memperbaiki dirinya sendiri, sebentar, ketika mouse bergerak, dan stiker seperti NOT FINAL dan TEMP tetap berbahasa Inggris di versi Indonesia karena menjadi bagian dari tampilan. Pesanan berakhir sebagai pesan WhatsApp. Header dan footer diisi oleh sebuah modul sebelum paint pertama, ke dalam placeholder dengan tinggi yang sudah dipesan agar tidak ada yang bergeser, dan fontnya di-host sendiri. Catatan serah terima mendaftar setiap nilai yang harus diganti sebelum peluncuran, termasuk nomor WhatsApp yang masih berupa placeholder.",
+    },
+    features: {
+      en: [
+        "Home, shop, product, drops, lookbook, journal, article, about, info, contact, cart, legal and 404 pages",
+        "24 products with per-colourway, per-size stock, each drawn as an SVG garment with a print layer",
+        "A drop countdown and a next-drop value kept in one config file",
+        "Cart and ordering by WhatsApp message",
+        "English by default and Indonesian on toggle, with decorative text left in English on purpose",
+        "Product and article structured data generated in JavaScript",
+        "Self-hosted fonts and a header and footer that load without layout shift",
+      ],
+      id: [
+        "Halaman beranda, toko, produk, drop, lookbook, jurnal, artikel, tentang, info, kontak, keranjang, legal, dan 404",
+        "24 produk dengan stok per warna dan per ukuran, masing-masing digambar sebagai garmen SVG dengan lapisan cetak",
+        "Hitung mundur drop dan nilai drop berikutnya yang disimpan di satu file konfigurasi",
+        "Keranjang dan pemesanan lewat pesan WhatsApp",
+        "Bahasa Inggris sebagai bawaan dan bahasa Indonesia lewat toggle, dengan teks dekoratif sengaja dibiarkan berbahasa Inggris",
+        "Data terstruktur produk dan artikel yang dihasilkan di JavaScript",
+        "Font yang di-host sendiri serta header dan footer yang dimuat tanpa pergeseran layout",
+      ],
+    },
+    outcome: {
+      en: "The store is live and works end to end as a static site, and its handover notes record a production check and everything left to replace.",
+      id: "Tokonya aktif dan bekerja dari ujung ke ujung sebagai situs statis, dan catatan serah terimanya memuat pemeriksaan produksi serta semua yang masih harus diganti.",
+    },
+    stack: ["HTML", "CSS", "JavaScript", "GSAP"],
+  },
+
+  hanasari: {
+    context: {
+      en: "Hanasari presents itself as a Japanese-Indonesian restaurant in Senopati, Jakarta, cooking washoku technique with Nusantara spice and running an eight-seat omakase counter. The site had to sell a mood and answer practical questions: what is on the menu, can I book, and what the kitchen does and does not serve.",
+      id: "Hanasari memperkenalkan diri sebagai restoran Jepang-Indonesia di Senopati, Jakarta, yang memasak dengan teknik washoku dan rempah Nusantara serta punya meja omakase delapan kursi. Situsnya harus menjual suasana dan menjawab pertanyaan praktis: apa isi menunya, bisakah saya memesan, dan apa yang disajikan dan tidak disajikan dapurnya.",
+    },
+    approach: {
+      en: "The home page opens with one idea, Wa meets Nusantara, then a ribbon of ingredients (sambal matah, yuzu, kecap manis, dashi, shiso, kecombrang) and six signature dishes that each keep a Japanese method and an Indonesian heart, such as gyoza rendang and soto ramen. An omakase page covers the eight-course, eight-seat counter, a story section follows dashi, spice, rice and citrus, and a private dining page takes group enquiries. The reservation and private-dining forms hand off to WhatsApp, using a number set as an environment variable, and a reserve bar stays within reach on mobile. The hero states plainly that the kitchen is pork-free and serves no alcohol. It is built with Next.js, next-intl, Motion and Lenis, with a script that checks the English and Indonesian message files.",
+      id: "Beranda dibuka dengan satu gagasan, Wa meets Nusantara, lalu pita bahan (sambal matah, yuzu, kecap manis, dashi, shiso, kecombrang) dan enam hidangan andalan yang masing-masing menjaga metode Jepang dan hati Indonesia, seperti gyoza rendang dan soto ramen. Halaman omakase membahas meja delapan hidangan dan delapan kursi, satu bagian cerita mengikuti dashi, rempah, nasi, dan jeruk, dan halaman private dining menerima pertanyaan kelompok. Formulir reservasi dan private dining diteruskan ke WhatsApp, memakai nomor yang diatur sebagai environment variable, dan bar reservasi tetap mudah dijangkau di ponsel. Hero menyatakan terang-terangan bahwa dapurnya bebas babi dan tidak menyajikan alkohol. Dibangun dengan Next.js, next-intl, Motion, dan Lenis, dengan skrip yang memeriksa file pesan bahasa Inggris dan Indonesia.",
+    },
+    features: {
+      en: [
+        "Home, menu, omakase, story, gallery, private dining and reserve pages",
+        "Six signature dishes that pair a Japanese method with an Indonesian flavour",
+        "An omakase page for the eight-seat counter",
+        "Reservation and private-dining forms that hand off to WhatsApp",
+        "A reserve bar that stays within reach on mobile",
+        "English and Indonesian through next-intl, checked by a script",
+      ],
+      id: [
+        "Halaman beranda, menu, omakase, cerita, galeri, private dining, dan reservasi",
+        "Enam hidangan andalan yang memadukan metode Jepang dengan rasa Indonesia",
+        "Halaman omakase untuk meja delapan kursi",
+        "Formulir reservasi dan private dining yang diteruskan ke WhatsApp",
+        "Bar reservasi yang tetap mudah dijangkau di ponsel",
+        "Bahasa Inggris dan Indonesia lewat next-intl, diperiksa oleh skrip",
+      ],
+    },
+    outcome: {
+      en: "The site is live and answers the three questions a diner has before booking: what is served, what is excluded, and how to reserve.",
+      id: "Situs ini aktif dan menjawab tiga pertanyaan tamu sebelum memesan: apa yang disajikan, apa yang tidak, dan bagaimana cara reservasi.",
+    },
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion", "Lenis", "next-intl"],
+  },
+
+  "nadi-athletic-club": {
+    context: {
+      en: "NADI presents itself as an athletic club on Jalan Gunawarman in South Jakarta: serious strength coaching, a reformer Pilates studio, a women-only floor, a recovery suite and a fuel bar, across five floors. Its audience is busy people who train before or after the office, so the site is built around time.",
+      id: "NADI memperkenalkan diri sebagai klub atletik di Jalan Gunawarman, Jakarta Selatan: pelatihan kekuatan yang serius, studio Pilates reformer, lantai khusus perempuan, ruang pemulihan, dan fuel bar, di lima lantai. Audiensnya adalah orang sibuk yang berlatih sebelum atau sesudah kantor, jadi situsnya dibangun di sekitar waktu.",
+    },
+    approach: {
+      en: "The home page is organised as a day at the club, from doors open to evening recovery, with a five-floor section that pins as you scroll and a line showing today's opening hours and how busy the club usually is. Classes, trainers, events and journal posts each have their own detail pages. Membership is shown as three tiers (Core, Plus, Signature) with a comparison, and the three-day free trial has its own form that hands off to WhatsApp. The Fuel Bar has a page with an order tray. The look is bold condensed type with one italic accent word in each headline, driven by Motion and Lenis, with English and Indonesian through next-intl.",
+      id: "Beranda disusun sebagai satu hari di klub, dari pintu dibuka hingga pemulihan malam, dengan bagian lima lantai yang menempel saat di-scroll dan satu baris yang menunjukkan jam buka hari ini serta seberapa ramai klub biasanya. Kelas, pelatih, acara, dan artikel jurnal masing-masing punya halaman detail. Keanggotaan ditampilkan sebagai tiga paket (Core, Plus, Signature) dengan perbandingan, dan uji coba gratis tiga hari punya formulir sendiri yang diteruskan ke WhatsApp. Fuel Bar punya halaman dengan nampan pesanan. Tampilannya memakai huruf tebal yang rapat dengan satu kata aksen italic di setiap judul, digerakkan Motion dan Lenis, dengan bahasa Inggris dan Indonesia lewat next-intl.",
+    },
+    features: {
+      en: [
+        "More than twenty routes, with classes, trainers, events and journal posts each on their own detail pages",
+        "A home page that pins a five-floor section while you scroll",
+        "Three membership tiers with a comparison",
+        "A free-trial form that hands off to WhatsApp",
+        "A Fuel Bar page with an order tray",
+        "Pages for a women-only floor, corporate memberships and house rules",
+        "English and Indonesian through next-intl",
+      ],
+      id: [
+        "Lebih dari dua puluh route, dengan kelas, pelatih, acara, dan artikel jurnal masing-masing di halaman detailnya",
+        "Beranda dengan bagian lima lantai yang menempel saat di-scroll",
+        "Tiga paket keanggotaan dengan perbandingan",
+        "Formulir uji coba gratis yang diteruskan ke WhatsApp",
+        "Halaman Fuel Bar dengan nampan pesanan",
+        "Halaman untuk lantai khusus perempuan, keanggotaan korporat, dan aturan klub",
+        "Bahasa Inggris dan Indonesia lewat next-intl",
+      ],
+    },
+    outcome: {
+      en: "The site is live and built to answer one question quickly: where does this fit into my day.",
+      id: "Situs ini aktif dan dibangun untuk menjawab satu pertanyaan dengan cepat: di mana ini cocok dalam hari saya.",
+    },
+    stack: ["Next.js", "TypeScript", "Motion", "Lenis", "next-intl"],
+  },
+
+  lunetra: {
+    context: {
+      en: "Lunetra presents itself as an opticians and eyewear atelier on Jalan Senopati in Jakarta, open since 1998, with unhurried eye exams and hand-finished frames. Eyewear is bought by looking and trying, so the site had to make browsing frames feel like standing in the shop.",
+      id: "Lunetra memperkenalkan diri sebagai optik dan atelier kacamata di Jalan Senopati, Jakarta, sejak 1998, dengan pemeriksaan mata yang tidak terburu-buru dan bingkai yang difinishing tangan. Kacamata dibeli dengan melihat dan mencoba, jadi situsnya harus membuat menjelajahi bingkai terasa seperti berdiri di dalam toko.",
+    },
+    approach: {
+      en: "I built it as a static multi-page site with Vite, plain HTML, CSS and JavaScript, and GSAP for motion, with clean URLs such as /frames/kawi working in development too. The fourteen frames are grouped into four collections (Heritage, Lumen, Solstice, Studio), and a frame finder page and a lenses page with prices help a visitor choose. The eye exam is told as talk, test, fit, and appointments are made on a dedicated page. Every business detail, from the WhatsApp number to the opening hours, lives in one config file. The hours drive an open-now status, and any contact field left empty is hidden across the site, so nothing links to a dead number. Every piece of text has English and Indonesian versions with identical keys, and the writing rules are checked before every build.",
+      id: "Saya membangunnya sebagai situs multi-halaman statis dengan Vite, HTML, CSS, dan JavaScript murni, serta GSAP untuk gerakan, dengan URL bersih seperti /frames/kawi yang juga berjalan di mode pengembangan. Empat belas bingkai dikelompokkan dalam empat koleksi (Heritage, Lumen, Solstice, Studio), dan halaman pencari bingkai serta halaman lensa dengan harga membantu pengunjung memilih. Pemeriksaan mata diceritakan sebagai bicara, uji, pasang, dan janji temu dibuat di halaman tersendiri. Setiap detail bisnis, dari nomor WhatsApp hingga jam buka, ada di satu file konfigurasi. Jam buka menggerakkan status buka sekarang, dan kolom kontak yang dikosongkan disembunyikan di seluruh situs, sehingga tidak ada tautan ke nomor yang mati. Setiap teks punya versi bahasa Inggris dan Indonesia dengan kunci yang identik, dan aturan penulisan diperiksa sebelum setiap build.",
+    },
+    features: {
+      en: [
+        "Home, collections, frame detail, frame finder, eye care, lenses, atelier, journal, visit, appointment, privacy and terms pages",
+        "Fourteen frames in four collections, each with a detail page",
+        "A frame finder page and a lenses page with prices",
+        "Opening hours that drive an open-now status",
+        "Contact details in one config file, with empty fields hidden everywhere",
+        "English and Indonesian text with identical keys, checked before every build",
+      ],
+      id: [
+        "Halaman beranda, koleksi, detail bingkai, pencari bingkai, perawatan mata, lensa, atelier, jurnal, kunjungan, janji temu, privasi, dan ketentuan",
+        "Empat belas bingkai di empat koleksi, masing-masing dengan halaman detail",
+        "Halaman pencari bingkai dan halaman lensa dengan harga",
+        "Jam buka yang menggerakkan status buka sekarang",
+        "Detail kontak di satu file konfigurasi, dengan kolom kosong disembunyikan di mana-mana",
+        "Teks bahasa Inggris dan Indonesia dengan kunci identik, diperiksa sebelum setiap build",
+      ],
+    },
+    outcome: {
+      en: "The site is live as a static build with no server. The WhatsApp number in its config is still empty, which the repository marks as a value to fill in.",
+      id: "Situs ini aktif sebagai build statis tanpa server. Nomor WhatsApp di konfigurasinya masih kosong, yang oleh repositori ditandai sebagai nilai yang harus diisi.",
+    },
+    stack: ["Vite", "HTML", "CSS", "JavaScript", "GSAP"],
+  },
+
+  "aurea-clinic": {
+    context: {
+      en: "Aurea presents itself as a doctor-led aesthetic and dermatology clinic in South Jakarta. People choosing a clinic worry about being sold things they do not need, so the whole site is built around calm and listening first.",
+      id: "Aurea memperkenalkan diri sebagai klinik estetika dan dermatologi yang dipimpin dokter di Jakarta Selatan. Orang yang memilih klinik khawatir ditawari hal yang tidak mereka butuhkan, jadi seluruh situs dibangun di sekitar ketenangan dan mendengarkan lebih dulu.",
+    },
+    approach: {
+      en: "The copy says it plainly: every plan begins with a conversation, with no pressure and no packages you do not need. The site lists six treatment areas and then explains a first visit as consultation, skin analysis, your plan, and treatment with follow-up. Doctors have their own page, and a journal covers routines, sunscreen in the tropics and what to expect before a first laser session. Technically it is a Flask 3 app with Jinja2, plain CSS variables and small vanilla JavaScript modules, with no build step and no database: all content lives in bilingual Python modules, and the app deploys on Vercel as a single function. Contact details come from environment variables. When no WhatsApp number is set, the floating button is hidden and every booking button leads to the contact page instead of a dead link, and the site sends noindex until indexing is switched on. I also added metric-matched fallback fonts so the layout does not jump when the real fonts arrive.",
+      id: "Teksnya menyatakannya terang-terangan: setiap rencana dimulai dari percakapan, tanpa tekanan dan tanpa paket yang tidak Anda butuhkan. Situs mendaftar enam bidang perawatan lalu menjelaskan kunjungan pertama sebagai konsultasi, analisis kulit, rencana Anda, serta perawatan dan tindak lanjut. Dokter punya halaman sendiri, dan jurnal membahas rutinitas, tabir surya di daerah tropis, dan apa yang perlu diketahui sebelum sesi laser pertama. Secara teknis ini adalah aplikasi Flask 3 dengan Jinja2, variabel CSS biasa, dan modul JavaScript vanilla yang kecil, tanpa langkah build dan tanpa database: seluruh konten ada di modul Python dwibahasa, dan aplikasinya di-deploy di Vercel sebagai satu function. Detail kontak datang dari environment variable. Ketika nomor WhatsApp belum diatur, tombol melayang disembunyikan dan setiap tombol pemesanan mengarah ke halaman kontak, bukan tautan mati, dan situs mengirim noindex sampai pengindeksan dinyalakan. Saya juga menambahkan font cadangan dengan metrik yang sama agar layout tidak melompat ketika font aslinya tiba.",
+    },
+    features: {
+      en: [
+        "Home, treatments, treatment detail, doctors, about, journal, article, contact and privacy pages",
+        "Six treatment areas, from medical facials and laser to injectables, contouring, acne and scar care, and skin boosters",
+        "A first-visit explanation in four steps",
+        "Booking that uses WhatsApp when a number is set and falls back to email or the contact page",
+        "noindex by default until indexing is enabled",
+        "English by default and Indonesian under /id, with metric-matched fallback fonts",
+      ],
+      id: [
+        "Halaman beranda, perawatan, detail perawatan, dokter, tentang, jurnal, artikel, kontak, dan privasi",
+        "Enam bidang perawatan, dari facial medis dan laser hingga injectable, contouring, perawatan jerawat dan bekas luka, serta skin booster",
+        "Penjelasan kunjungan pertama dalam empat langkah",
+        "Pemesanan yang memakai WhatsApp ketika nomor diatur dan beralih ke email atau halaman kontak jika tidak",
+        "noindex secara bawaan sampai pengindeksan diaktifkan",
+        "Bahasa Inggris sebagai bawaan dan bahasa Indonesia di bawah /id, dengan font cadangan berbasis metrik",
+      ],
+    },
+    outcome: {
+      en: "The site is live and handles missing configuration gracefully, and it stays out of search engines until indexing is deliberately turned on.",
+      id: "Situs ini aktif dan menangani konfigurasi yang belum ada dengan baik, serta tidak muncul di mesin pencari sampai pengindeksan sengaja dinyalakan.",
+    },
+    stack: ["Python", "Flask", "Jinja2", "CSS", "JavaScript"],
+  },
+
+  "pilar-material": {
+    context: {
+      en: "Pilar Material presents itself as a building materials store in Cikupa, Tangerang, supplying cement, rebar, timber, roofing, paint and more to homes, schools, offices and housing projects. A contractor does not check out a basket: they send a list and ask for a price.",
+      id: "Pilar Material memperkenalkan diri sebagai toko bahan bangunan di Cikupa, Tangerang, yang memasok semen, besi beton, kayu, atap, cat, dan lainnya untuk rumah, sekolah, kantor, dan proyek perumahan. Kontraktor tidak melakukan checkout keranjang: mereka mengirim daftar dan meminta harga.",
+    },
+    approach: {
+      en: "The site is built around that behaviour. It lists 85 products in 12 categories and six project types, from family homes to warehouses, each with a checklist of materials. A wall and concrete calculator estimates quantities, with its coefficients and their sources kept in the code. Visitors build a quote list in the browser, kept in localStorage, and it leaves the browser only as a WhatsApp message. There is no database, no login and no analytics. It is a Flask 3 app with Jinja2, hand-written CSS and vanilla JavaScript and no Node build step, with English at the root and Indonesian under /id. A test suite checks routes, content and a set of hard rules, including that the only third-party origin is the font host, and I later self-hosted the typeface. The README states that the phone and WhatsApp numbers are not working lines and the prices are indicative, to be replaced with the owner's.",
+      id: "Situs ini dibangun di sekitar perilaku itu. Situs mendaftar 85 produk di 12 kategori dan enam jenis proyek, dari rumah keluarga hingga gudang, masing-masing dengan daftar periksa material. Kalkulator dinding dan beton memperkirakan kuantitas, dengan koefisien beserta sumbernya tersimpan di kode. Pengunjung menyusun daftar penawaran di browser, disimpan di localStorage, dan daftar itu hanya keluar dari browser sebagai pesan WhatsApp. Tidak ada database, tidak ada login, dan tidak ada analitik. Ini adalah aplikasi Flask 3 dengan Jinja2, CSS tulisan tangan, dan JavaScript vanilla tanpa langkah build Node, dengan bahasa Inggris di root dan bahasa Indonesia di bawah /id. Suite tes memeriksa route, konten, dan sekumpulan aturan keras, termasuk bahwa satu-satunya origin pihak ketiga adalah host font, dan kemudian saya meng-host typeface-nya sendiri. README menyatakan bahwa nomor telepon dan WhatsApp bukan saluran yang aktif dan harganya hanya indikatif, untuk diganti dengan milik pemilik.",
+    },
+    features: {
+      en: [
+        "Home, products, category, product, solutions, calculator, services, quote, about, contact and privacy pages",
+        "85 products in 12 categories",
+        "Six project types, each with a material checklist",
+        "A wall and concrete calculator with documented coefficients",
+        "A quote list kept in the browser that is sent as a WhatsApp message",
+        "English at the root and Indonesian under /id, with a test suite for routes and content",
+      ],
+      id: [
+        "Halaman beranda, produk, kategori, produk, solusi, kalkulator, layanan, penawaran, tentang, kontak, dan privasi",
+        "85 produk di 12 kategori",
+        "Enam jenis proyek, masing-masing dengan daftar periksa material",
+        "Kalkulator dinding dan beton dengan koefisien yang terdokumentasi",
+        "Daftar penawaran yang disimpan di browser dan dikirim sebagai pesan WhatsApp",
+        "Bahasa Inggris di root dan bahasa Indonesia di bawah /id, dengan suite tes untuk route dan konten",
+      ],
+    },
+    outcome: {
+      en: "The site is live and matches how a builder actually buys, with a list, a quantity estimate and a quote. Its prices are indicative and its contact numbers are placeholders by design.",
+      id: "Situs ini aktif dan sesuai dengan cara pembangun benar-benar membeli, dengan daftar, perkiraan kuantitas, dan penawaran. Harganya indikatif dan nomor kontaknya adalah placeholder yang disengaja.",
+    },
+    stack: ["Python", "Flask", "Jinja2", "CSS", "JavaScript"],
+  },
+
+  panenku: {
+    context: {
+      en: "Panenku presents itself as a farm-to-table produce marketplace for Jabodetabek: vegetables harvested within a day and delivered in crates to events, schools and offices, with fair prices for farmers. Its buyers are kitchens placing one-off or recurring orders, not shoppers filling a basket.",
+      id: "Panenku memperkenalkan diri sebagai marketplace hasil panen dari kebun ke meja untuk Jabodetabek: sayuran yang dipanen dalam sehari dan diantar dalam peti ke acara, sekolah, dan kantor, dengan harga yang adil bagi petani. Pembelinya adalah dapur yang memesan sekali atau berulang, bukan pembeli yang mengisi keranjang.",
+    },
+    approach: {
+      en: "The site is organised by who is buying, with a page each for events, schools and offices, a farmers page and a produce page. A four-step explanation (tell us what you need, we confirm with the farm, harvested and packed, delivered) replaces a checkout. The request form validates its input and then redirects to WhatsApp, and the tests cover both behaviours in both languages. It is a Flask 3 app with server-rendered Jinja templates. Tailwind CSS is compiled once with the standalone CLI and the output is committed, so Vercel needs no build step. Fraunces and DM Sans are self-hosted with metric-matched fallbacks, photos come from a script that crops them to WebP and writes blur placeholders, and produce, farmers and testimonials live in JSON files.",
+      id: "Situs ini disusun menurut siapa yang membeli, dengan satu halaman untuk acara, sekolah, dan kantor, halaman petani, dan halaman hasil panen. Penjelasan empat langkah (beri tahu kebutuhan Anda, kami konfirmasi ke kebun, dipanen dan dikemas, diantar) menggantikan checkout. Formulir permintaan memvalidasi isinya lalu mengalihkan ke WhatsApp, dan tes mencakup kedua perilaku itu di kedua bahasa. Ini adalah aplikasi Flask 3 dengan template Jinja yang dirender di server. Tailwind CSS dikompilasi sekali dengan CLI standalone dan hasilnya di-commit, sehingga Vercel tidak membutuhkan langkah build. Fraunces dan DM Sans di-host sendiri dengan font cadangan berbasis metrik, foto datang dari skrip yang memotongnya menjadi WebP dan menulis placeholder blur, dan hasil panen, petani, dan testimoni tersimpan di file JSON.",
+    },
+    features: {
+      en: [
+        "Home, produce, events, schools, offices, farmers, about, contact and request pages",
+        "A request form with server validation and a WhatsApp redirect",
+        "A four-step explanation that replaces a checkout",
+        "Compiled Tailwind CSS committed to the repository, so Vercel needs no build step",
+        "Self-hosted fonts with metric-matched fallbacks",
+        "English and Indonesian, with scripts that check matching keys and that every page renders in both",
+      ],
+      id: [
+        "Halaman beranda, hasil panen, acara, sekolah, kantor, petani, tentang, kontak, dan permintaan",
+        "Formulir permintaan dengan validasi di server dan pengalihan ke WhatsApp",
+        "Penjelasan empat langkah yang menggantikan checkout",
+        "Tailwind CSS terkompilasi yang di-commit ke repositori, sehingga Vercel tidak butuh langkah build",
+        "Font yang di-host sendiri dengan font cadangan berbasis metrik",
+        "Bahasa Inggris dan Indonesia, dengan skrip yang memeriksa kecocokan kunci dan bahwa setiap halaman bisa dirender di keduanya",
+      ],
+    },
+    outcome: {
+      en: "The site is live and turns a farm-to-kitchen order into a validated request and a WhatsApp message, with nothing in between to maintain.",
+      id: "Situs ini aktif dan mengubah pesanan dari kebun ke dapur menjadi permintaan yang tervalidasi dan pesan WhatsApp, tanpa apa pun di antaranya yang perlu dirawat.",
+    },
+    stack: ["Python", "Flask", "Jinja2", "Tailwind CSS", "GSAP"],
+  },
+
+  bytewright: {
+    context: {
+      en: "Bytewright presents itself as a computer shop in Gading Serpong, Tangerang, selling ready-made and custom PCs, parts and Macs, with a service desk. People buy a PC by asking someone they trust, so the site is organised like a conversation that starts with one question: what do you need it for?",
+      id: "Bytewright memperkenalkan diri sebagai toko komputer di Gading Serpong, Tangerang, yang menjual PC jadi dan rakitan, suku cadang, dan Mac, dengan meja servis. Orang membeli PC dengan bertanya kepada orang yang dipercaya, jadi situsnya disusun seperti percakapan yang dimulai dari satu pertanyaan: untuk apa Anda membutuhkannya?",
+    },
+    approach: {
+      en: "The home page starts there, with builds named for their use (Play Core, Play Pro, Create Plus, Learn Code, Work Pro) next to a MacBook Air, and a custom-build route for people who want something specific. A service page tells the repair process in seven steps, with a written quote promised before any repair, and journal articles give plain guides such as how to choose a power supply without overpaying. There is no backend, database or login. WhatsApp is the way to order or ask, and when no number is configured the buttons fall back to the message form on the contact page, so the site builds and runs with no environment variables at all. It is built with Next.js, framer-motion, Lenis and next-intl, with Vercel Analytics added.",
+      id: "Beranda dimulai dari sana, dengan build yang dinamai menurut kegunaannya (Play Core, Play Pro, Create Plus, Learn Code, Work Pro) di samping sebuah MacBook Air, dan jalur rakitan khusus untuk orang yang menginginkan sesuatu yang spesifik. Halaman servis menceritakan proses perbaikan dalam tujuh langkah, dengan penawaran tertulis yang dijanjikan sebelum perbaikan apa pun, dan artikel jurnal memberi panduan sederhana seperti cara memilih power supply tanpa membayar berlebihan. Tidak ada backend, database, atau login. WhatsApp adalah cara memesan atau bertanya, dan ketika nomor belum dikonfigurasi, tombolnya beralih ke formulir pesan di halaman kontak, sehingga situs bisa di-build dan berjalan tanpa environment variable sama sekali. Dibangun dengan Next.js, framer-motion, Lenis, dan next-intl, dengan Vercel Analytics ditambahkan.",
+    },
+    features: {
+      en: [
+        "Home, builds, build detail, Mac, parts, custom, service, journal, article, about, policies and contact pages",
+        "Ready-made builds named by use, plus a custom-build page",
+        "A seven-step service page with a written quote promised before repair",
+        "Journal articles written as plain guides",
+        "WhatsApp ordering with a fallback to the contact form when no number is set",
+        "English and Indonesian through next-intl, with no backend at all",
+      ],
+      id: [
+        "Halaman beranda, build, detail build, Mac, suku cadang, rakitan khusus, servis, jurnal, artikel, tentang, kebijakan, dan kontak",
+        "Build jadi yang dinamai menurut kegunaan, plus halaman rakitan khusus",
+        "Halaman servis tujuh langkah dengan penawaran tertulis yang dijanjikan sebelum perbaikan",
+        "Artikel jurnal yang ditulis sebagai panduan sederhana",
+        "Pemesanan lewat WhatsApp dengan cadangan ke formulir kontak ketika nomor belum diatur",
+        "Bahasa Inggris dan Indonesia lewat next-intl, tanpa backend sama sekali",
+      ],
+    },
+    outcome: {
+      en: "The site is live and runs with no configuration, which makes it easy to hand over: add a WhatsApp number and an email address and the rest is already in place.",
+      id: "Situs ini aktif dan berjalan tanpa konfigurasi, sehingga mudah diserahkan: tambahkan nomor WhatsApp dan alamat email, dan sisanya sudah tersedia.",
+    },
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Lenis", "next-intl"],
+  },
 };
