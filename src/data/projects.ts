@@ -99,6 +99,18 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "hrissolvara",
+    name: "HRIS Solvara",
+    category: "tools",
+    domain: "hrissolvara.vercel.app",
+    status: "live",
+    featured: true,
+    highlight: {
+      en: "A nine-module HR system for a fictional chemical plant: shift attendance, expiring safety certifications, payroll built on dated tax rules, and one approval engine shared by every request type.",
+      id: "Sistem HR sembilan modul untuk pabrik kimia fiktif: absensi shift, sertifikasi keselamatan bermasa berlaku, payroll yang dibangun di atas aturan pajak bertanggal, dan satu mesin approval untuk semua jenis pengajuan.",
+    },
+  },
+  {
     slug: "valea-tirta-nusantara",
     name: "Valea Tirta Nusantara",
     category: "immersive",

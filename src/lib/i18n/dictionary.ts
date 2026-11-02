@@ -33,7 +33,7 @@ export const dictionary = {
       heroSecondary: "Discuss a project",
       selectedTitle: "Selected work",
       selectedNote:
-        "Five projects chosen for technical range rather than surface polish: on-chain data analysis, state-driven interfaces, filtering logic, multilingual content and technical B2B product presentation.",
+        "Six projects chosen for technical range rather than surface polish: on-chain data analysis, a full HR system with payroll, state-driven interfaces, filtering logic, multilingual content and technical B2B product presentation.",
       readCase: "Project details",
       visitSite: "Visit site",
       newTab: "(opens in a new tab)",
@@ -190,7 +190,7 @@ export const dictionary = {
       heroSecondary: "Diskusikan proyek",
       selectedTitle: "Karya pilihan",
       selectedNote:
-        "Lima proyek yang dipilih karena ragam tekniknya, bukan sekadar tampilannya: analisis data on-chain, antarmuka berbasis state, logika filter, konten multibahasa, dan presentasi produk B2B yang teknis.",
+        "Enam proyek yang dipilih karena ragam tekniknya, bukan sekadar tampilannya: analisis data on-chain, sistem HR lengkap dengan payroll, antarmuka berbasis state, logika filter, konten multibahasa, dan presentasi produk B2B yang teknis.",
       readCase: "Detail proyek",
       visitSite: "Kunjungi situs",
       newTab: "(terbuka di tab baru)",

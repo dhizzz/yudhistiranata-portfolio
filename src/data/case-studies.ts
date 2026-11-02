@@ -359,6 +359,40 @@ export const caseStudies: Record<string, CaseStudy> = {
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Lenis", "React Hook Form"],
   },
 
+  hrissolvara: {
+    context: {
+      en: "PT Solvara Kimia Indonesia is a fictional chemical manufacturer with about 3,000 employees, built as a portfolio project. A plant like this runs on three-shift rotations, mandatory safety training whose certificates expire, and payroll that has to follow Indonesian tax and social security rules. Off-the-shelf HR tools assume a nine-to-five office, so the work patterns that matter most here are the ones they handle worst.",
+      id: "PT Solvara Kimia Indonesia adalah produsen bahan kimia fiktif dengan sekitar 3.000 karyawan, dibangun sebagai proyek portofolio. Pabrik seperti ini berjalan dengan tiga regu shift, training keselamatan wajib yang sertifikatnya kedaluwarsa, dan payroll yang harus mengikuti aturan pajak serta jaminan sosial Indonesia. Alat HR yang umum dijual mengasumsikan jam kerja kantor, sehingga pola kerja yang paling penting di sini justru paling buruk ditangani.",
+    },
+    approach: {
+      en: "I built it as nine modules that share one spine, because the expensive bugs in HR live between modules rather than inside them. Approvals for leave, overtime, attendance corrections, training and data changes all run through a single engine with row locking, so two approvers cannot produce two decisions. Training compliance is a derived table recalculated on write and again each night per chunk, which lets the dashboard answer for 3,000 employees in one aggregate query instead of counting rows per page. Payroll keeps no rates in code: every figure carries an effective date and a cited source, and the calculations are tested against the worked examples in PMK 168/2023. Where the law gets genuinely complicated, such as a mid-year joiner, the limitation is written down rather than smoothed over.",
+      id: "Saya membangunnya sebagai sembilan modul yang berbagi satu tulang punggung, karena bug mahal di HR hidup di antara modul, bukan di dalamnya. Approval untuk cuti, lembur, koreksi absensi, training, dan perubahan data semuanya melewati satu mesin dengan penguncian baris, sehingga dua approver tidak bisa menghasilkan dua keputusan. Kepatuhan training adalah tabel turunan yang dihitung ulang saat data berubah dan lagi tiap malam per chunk, sehingga dashboard bisa menjawab untuk 3.000 karyawan dalam satu query agregat alih-alih menghitung baris per halaman. Payroll tidak menyimpan tarif di kode: setiap angka punya tanggal berlaku dan sumber yang dikutip, dan perhitungannya diuji terhadap contoh resmi PMK 168/2023. Di titik hukumnya benar-benar rumit, misalnya karyawan masuk di tengah tahun, batasannya ditulis terbuka, bukan dihaluskan.",
+    },
+    features: {
+      en: [
+        "Nine modules: core HR, shift attendance, leave and overtime, training, payroll, recruitment, performance, employee portal and administration",
+        "One approval engine with two levels, row locking and acting on behalf of an absent supervisor",
+        "Clock in and out with a geofence, and three-shift rotation including a night shift that crosses midnight",
+        "Training as the lead module: per-role requirements, sessions with quotas and waitlists, rotating QR check-in and public certificate verification",
+        "Payroll with dated configuration for PPh 21 TER, PTKP, BPJS and overtime, chunked calculation and separation of duties before finalisation",
+        "Server-side authorisation on every action and page, enforced by a test that fails when one is left unguarded, plus an append-only audit log",
+      ],
+      id: [
+        "Sembilan modul: core HR, absensi shift, cuti dan lembur, training, payroll, rekrutmen, kinerja, portal karyawan, dan administrasi",
+        "Satu mesin approval dengan dua level, penguncian baris, dan atas nama atasan yang tidak aktif",
+        "Clock in dan clock out dengan geofence, serta rotasi tiga shift termasuk shift malam yang melewati tengah malam",
+        "Training sebagai modul unggulan: aturan wajib per jabatan, sesi dengan kuota dan daftar tunggu, check-in QR berputar, dan verifikasi sertifikat publik",
+        "Payroll dengan konfigurasi bertanggal untuk PPh 21 TER, PTKP, BPJS, dan lembur, dihitung per chunk dengan pemisahan tugas sebelum finalisasi",
+        "Otorisasi di sisi server untuk setiap aksi dan halaman, dijaga tes yang gagal bila ada yang terlewat, ditambah audit log append-only",
+      ],
+    },
+    outcome: {
+      en: "HRIS Solvara is live as a working demo with seeded data and a demo account box on the login page, so the whole flow can be walked through in about five minutes: approve a leave request, check a certificate is about to expire, calculate a payroll period, then read the audit trail of everything you just did. All people and company data are fictional, and the tax and BPJS figures are a portfolio exercise rather than advice.",
+      id: "HRIS Solvara aktif sebagai demo yang berjalan dengan data seed dan kotak akun demo di halaman login, jadi seluruh alurnya bisa ditelusuri dalam sekitar lima menit: setujui pengajuan cuti, cek sertifikat yang hampir kedaluwarsa, hitung satu periode payroll, lalu baca jejak audit dari semua yang baru saja dilakukan. Seluruh data orang dan perusahaan bersifat fiktif, dan angka pajak serta BPJS di sini adalah latihan portofolio, bukan nasihat.",
+    },
+    stack: ["Next.js", "JavaScript", "PostgreSQL", "Prisma", "Auth.js", "Tailwind CSS", "shadcn/ui", "TanStack Table", "Vitest", "Playwright"],
+  },
+
   "adikarya-cement": {
     context: {
       en: "Adikarya Cement, trading name of PT Semen Adikarya Mandiri, is a fictional cement manufacturer that I built as a portfolio project. Industrial companies like this sell to contractors and developers, who look for product specs, quality standards and whether supply can reach their site.",
